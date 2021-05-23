@@ -38,6 +38,7 @@ char RPS::playerMove() {
     char move;
     cout << "Choose a move. (R)ock, (P)apers, (S)cissors or (E)xit\n";
     cin >> move;
+    move = toupper(move);
     cout << endl;
     if (validMoves.find(move) == validMoves.end()) {
 	return 'I'; // Invalid move	
